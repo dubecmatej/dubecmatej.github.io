@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matej Dubec — Notebook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <p class="header__kicker">a personal notebook</p>
+    <h1 class="header__name">MATEJ DUBEC</h1>
+    <p class="header__subtitle">Army defense system tester by day, ex-QA wanting to return to game dev by night — just taking my time to <span class="highlight">level up</span>.</p>
+
+    <div class="now">
+      <span class="now__label">Now:</span>
+      <span class="now__item">HW &amp; SW Tester at URC Systems</span>
+      <span class="now__sep">•</span>
+      <span class="now__item">Taking a Level Design course</span>
+      <span class="now__sep">•</span>
+      <span class="now__item">Building personal projects</span>
+      <span class="now__sep">•</span>
+      <span class="now__item">Open to opportunities</span>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" role="tablist" aria-label="Sections">
+    <button class="nav__tab is-active" role="tab" aria-selected="true" aria-controls="panel-about" id="tab-about" data-target="about">ABOUT</button>
+    <button class="nav__tab" role="tab" aria-selected="false" aria-controls="panel-blog" id="tab-blog" data-target="blog">BLOG</button>
+    <button class="nav__tab" role="tab" aria-selected="false" aria-controls="panel-projects" id="tab-projects" data-target="projects">PROJECTS</button>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <!-- ABOUT -->
+    <section class="panel is-active" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
+
+      <div class="about">
+        <div class="about__photo">
+          <div class="photo-frame">
+            <img src="assets/photo.jpg" alt="Matej Dubec" class="photo-frame__img">
+          </div>
+        </div>
+
+        <div class="about__info">
+          <h2 class="section-title">About</h2>
+          <p>
+            Hi — I'm Matej. I used to test games for a living; these days I test
+            hardware and software for a different kind of high-stakes system. By
+            night I'm slowly teaching myself how to design the things I used to
+            just break. I like systems that surprise you, stories that stick
+            around longer than the screen is on, and the quiet satisfaction of
+            fixing something that was broken.
+          </p>
+
+          <h3 class="mini-title">Current focus</h3>
+          <p>HW &amp; SW Tester at URC Systems s.r.o., where we build electronic
+            defense systems — surveillance and reconnaissance — for the army.
+            Outside of work, I'm taking a course in level design and slowly
+            turning scattered notes into actual projects.</p>
+
+          <h3 class="mini-title">Experience</h3>
+          <p>QA Technician at Hangar 13 starting late 2022, finding the bugs so
+            players didn't have to. Since late 2025, I've been testing hardware
+            and software for defense systems at URC Systems s.r.o. — a very
+            different kind of "if it breaks, it matters."</p>
+
+          <h3 class="mini-title">Goals</h3>
+          <p>Move from finding problems to designing solutions — level design,
+            game content, the creative side of making games rather than just
+            breaking them. I want to put that creativity toward producing games
+            at the highest quality possible. Ship something small but honest.
+            Write more than I currently do.</p>
+
+          <div class="links">
+            <a href="#" class="link">Email</a>
+            <a href="#" class="link">LinkedIn</a>
+            <a href="#" class="link">GitHub</a>
+            <a href="#" class="link">Itch.io</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MY STORY -->
+      <div class="story">
+        <h2 class="section-title">My Story</h2>
+        <div class="story__text">
+          <p>
+            I don't remember a time before games. I remember the time I started
+            paying attention to <em>why</em> they worked, though — that came later,
+            somewhere between finishing a story that wrecked me for a week and
+            replaying a level just to understand how it was built.
+          </p>
+          <p>
+            Placeholder paragraph — this is where the real letter goes. Talk about
+            how you got into gaming, the first story that mattered to you, what
+            pulled you from playing toward making, and why design specifically
+            (versus just writing, or just testing).
+          </p>
+          <p>
+            Placeholder paragraph — aspirations. What you want three, five, ten
+            years from now. Keep it honest and a little unfinished — this page is
+            allowed to grow.
+          </p>
+        </div>
+      </div>
+
+      <!-- PERSONAL PANELS -->
+      <div class="panels-grid">
+        <div class="mini-card">
+          <h4>Currently Playing</h4>
+          <p>Prey (2017) — Arkane Studios.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Favorite Games</h4>
+          <p>Placeholder — title, title, title.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Design Inspirations</h4>
+          <p>Placeholder — names, studios, articles.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Current Goals</h4>
+          <p>Placeholder — one or two, kept honest.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Currently Learning</h4>
+          <p>Placeholder — Level Design, a tool, a language.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- BLOG -->
+    <section class="panel" id="panel-blog" role="tabpanel" aria-labelledby="tab-blog" hidden>
+      <h2 class="section-title">Blog</h2>
+      <p class="section-note">Thoughts, reviews, case studies, status updates and everything else that's worth writing down.</p>
+
+      <div class="cards">
+        <article class="card card--pending">
+          <div class="card__image"><span>[ movie image ]</span></div>
+          <p class="card__meta">Movie Review</p>
+          <h3 class="card__title">Title TBD</h3>
+          <p class="card__teaser">Full write-up coming soon.</p>
+        </article>
+        <article class="card card--pending">
+          <div class="card__image"><span>[ game logo ]</span></div>
+          <p class="card__meta">Game Review</p>
+          <h3 class="card__title">Prey (2017) — Arkane Studios</h3>
+          <p class="card__teaser">Currently playing. Full review coming soon.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" hidden>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-note">What I worked on and what it taught me.</p>
+
+      <div class="cards">
+        <article class="card card--pending">
+          <div class="card__image"><span>[ screenshot ]</span></div>
+          <p class="card__meta">Web Development</p>
+          <h3 class="card__title">DORADA TAX s.r.o. — Website</h3>
+          <p class="card__teaser">Details coming soon.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- TIMELINE -->
+  <footer class="timeline-wrap">
+    <div class="timeline">
+      <div class="timeline__line"></div>
+      <div class="timeline__entry">
+        <span class="timeline__year">2017</span>
+        <span class="timeline__label">Started studying at FIT BUT</span>
+      </div>
+      <div class="timeline__entry">
+        <span class="timeline__year">Late 2022</span>
+        <span class="timeline__label">QA Technician at Hangar 13</span>
+      </div>
+      <div class="timeline__entry is-current">
+        <span class="timeline__year">Late 2025 – present</span>
+        <span class="timeline__label">HW &amp; SW Tester at URC Systems s.r.o.</span>
+      </div>
+      <div class="timeline__entry is-current">
+        <span class="timeline__year">Now</span>
+        <span class="timeline__label">Learning level design</span>
+      </div>
+      <div class="timeline__entry is-future">
+        <span class="timeline__year">Future</span>
+        <span class="timeline__label">Building things around games &amp; stories</span>
+      </div>
+    </div>
+    <p class="footer-note">Matej Dubec — last written on, this page keeps changing.</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
