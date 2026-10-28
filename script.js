@@ -25,3 +25,19 @@ tabs.forEach((tab) => {
     });
   });
 });
+
+const timelineWrap = document.querySelector(".timeline-wrap");
+const timeline = document.querySelector(".timeline");
+
+if (timelineWrap && timeline && "IntersectionObserver" in window) {
+  const revealTimeline = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        timelineWrap.classList.toggle("is-revealed", entry.isIntersecting);
+        timeline.classList.toggle("is-revealed", entry.isIntersecting);
+      });
+    },
+    { threshold: 0.35 }
+  );
+  revealTimeline.observe(timelineWrap);
+}
