@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,18 +151,21 @@
       <p class="section-note">Thoughts, reviews, case studies, status updates and everything else that's worth writing down.</p>
 
       <div class="cards">
-        <article class="card card--pending">
-          <div class="card__image"><span>[ movie image ]</span></div>
-          <p class="card__meta">Movie Review</p>
-          <h3 class="card__title">Title TBD</h3>
-          <p class="card__teaser">Full write-up coming soon.</p>
-        </article>
-        <article class="card card--pending">
-          <div class="card__image"><span>[ game logo ]</span></div>
-          <p class="card__meta">Game Review</p>
-          <h3 class="card__title">Prey (2017) — Arkane Studios</h3>
-          <p class="card__teaser">Currently playing. Full review coming soon.</p>
-        </article>
+        {% assign blog_sorted = site.blog | sort: "date" | reverse %}
+        {% for post in blog_sorted %}
+        <a class="card card--pending" href="{{ post.url | relative_url }}">
+          <div class="card__image">
+            {% if post.image %}
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+            {% else %}
+              <span>[ {{ post.type | downcase }} image ]</span>
+            {% endif %}
+          </div>
+          <p class="card__meta">{{ post.type }}</p>
+          <h3 class="card__title">{{ post.title }}</h3>
+          <p class="card__teaser">{{ post.teaser }}</p>
+        </a>
+        {% endfor %}
       </div>
     </section>
 
@@ -170,12 +175,21 @@
       <p class="section-note">What I worked on and what it taught me.</p>
 
       <div class="cards">
-        <article class="card card--pending">
-          <div class="card__image"><span>[ screenshot ]</span></div>
-          <p class="card__meta">Web Development</p>
-          <h3 class="card__title">DORADA TAX s.r.o. — Website</h3>
-          <p class="card__teaser">Details coming soon.</p>
-        </article>
+        {% assign projects_sorted = site.projects | sort: "date" | reverse %}
+        {% for project in projects_sorted %}
+        <a class="card card--pending" href="{{ project.url | relative_url }}">
+          <div class="card__image">
+            {% if project.image %}
+              <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+            {% else %}
+              <span>[ screenshot ]</span>
+            {% endif %}
+          </div>
+          <p class="card__meta">{{ project.category }}</p>
+          <h3 class="card__title">{{ project.title }}</h3>
+          <p class="card__teaser">{{ project.teaser }}</p>
+        </a>
+        {% endfor %}
       </div>
     </section>
 

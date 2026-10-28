@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: dubecmatej/dubecmatej.github.io
+  branch: main
+  base_url: https://REPLACE-WITH-YOUR-OAUTH-PROXY-URL
+  auth_endpoint: auth
+
+site_url: https://dubecmatej.github.io
+display_url: https://dubecmatej.github.io
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Blog Post"
+    folder: "_blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: ["Movie Review", "Game Review", "Thoughts", "Status Update"]
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Cover Image", name: "image", widget: "image", required: false }
+      - { label: "Teaser", name: "teaser", widget: "string", hint: "One short line shown on the card." }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "string", hint: "e.g. Web Development, Game Prototype" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Cover Image / Screenshot", name: "image", widget: "image", required: false }
+      - { label: "Teaser", name: "teaser", widget: "string", hint: "One short line shown on the card." }
+      - { label: "Technologies", name: "technologies", widget: "list", required: false }
+      - { label: "Link", name: "link", widget: "string", required: false, hint: "Optional live link or repo URL." }
+      - { label: "Body", name: "body", widget: "markdown" }

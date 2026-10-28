@@ -1,0 +1,25 @@
+title: Matej Dubec — Notebook
+description: A personal notebook — about, blog, and projects.
+
+collections:
+  blog:
+    output: true
+    permalink: /blog/:slug/
+  projects:
+    output: true
+    permalink: /projects/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "blog"
+    values:
+      layout: "entry"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "entry"
+
+exclude:
+  - README.md

@@ -315,6 +315,8 @@ body {
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: inherit;
+  text-decoration: none;
 }
 
 .card--empty {
@@ -342,10 +344,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   color: var(--ink-faint);
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   margin-bottom: 1rem;
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card__meta {
@@ -374,6 +383,62 @@ body {
   margin: 0;
   font-size: 0.85rem;
   text-align: center;
+}
+
+/* ---------- INDIVIDUAL ENTRY PAGE (blog post / project) ---------- */
+.entry-page {
+  padding-top: 3.5rem;
+  max-width: 680px;
+}
+
+.entry-back {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  color: var(--ink-faint);
+  text-decoration: none;
+  font-size: 0.85rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.entry-back:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.entry__title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  margin: 0.3rem 0 0.4rem;
+}
+
+.entry__date {
+  color: var(--ink-faint);
+  font-size: 0.8rem;
+  margin: 0 0 2rem;
+}
+
+.entry__image {
+  border: 1px solid var(--rule);
+  background: var(--paper-dim);
+  padding: 6px;
+  margin-bottom: 2rem;
+}
+
+.entry__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.entry__body {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+.entry__body p {
+  margin: 0 0 1.2rem;
 }
 
 /* ---------- TIMELINE ---------- */
