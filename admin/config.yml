@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dubecmatej/dubecmatej.github.io
   branch: main
-  base_url: https://REPLACE-WITH-YOUR-OAUTH-PROXY-URL
+  base_url: https://decap-cms-oauth-6sod.onrender.com
   auth_endpoint: auth
 
 site_url: https://dubecmatej.github.io
